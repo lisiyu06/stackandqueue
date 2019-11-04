@@ -6,6 +6,7 @@ package homework19;
  */
 
 // 实现一个基础的栈
+// 使用数组
 
 public class Stack {
     // 使用一个数组来表示栈
@@ -47,6 +48,19 @@ public class Stack {
     // 5. 栈的大小
     public int size() {
         return size;
+    }
+
+    public static void main(String[] args) {
+        Stack stack = new Stack();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        while (!stack.isEmpty()) {
+            int curFront = stack.peek();
+            System.out.println(curFront);
+            stack.pop();
+        }
     }
 
 }
